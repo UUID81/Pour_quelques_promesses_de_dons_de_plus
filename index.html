@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+
+        {% block title %}Accueil{% endblock %}
+        
+        {% block contenu %} 
+            <h1>Accueil</h1>
+            <ul>
+                {% for donnateur in donnateurs %}
+                <li> <a href="{{url_for('fiche', id= donnateur['id'])}}"> {{donnateur['prenom']}} {{donnateur['nom']}} </a></li>
+                {% endfor %}
+            </ul>
+        
+   
+        
+        <h1>Aidez nous à loger les SDFs</h1>
+        <h2>Les problématiques de logements et de marginalisations s'accentuent</h2>
+            <div>
+                <a href="#enbas">Faire un don</a>
+                <p>Face à l'augmentation des SDFs et de la misère sociale, nous devons agir,
+                    et nous avons besoins de moyens pécuniers mais aussi humains</p>   
+            </div>
+           
+    
+            <ul>
+                <li>Le nombre de sdfs à doublé en dix ans</li>
+                <li>La pauvreté augmente de jours en jours</li>
+            </ul>
+            <div>Aller à la rencontre des personnes souffrant de solitude, que ce soit à leur domicile, à l’hôpital, en maison de retraite ou dans la rue quand elles n’ont plus de toit,
+                est la mission phare de Saint-Morgan. Équipés d’un thermos, de boissons chaudes, de biscuits… nos bénévoles arpentent les rues de leur quartier, pour aller visiter
+                les plus exclus de tous : ceux que l’on nomme froidement les SDF. Ils prennent le temps de s’assoir à leurs côtés, de les écouter, pour nouer avec eux une relation fraternelle.
+                Au fur et à mesure de leurs visites, la confiance s’installe et il est alors possible de proposer une aide durable (repas, hébergement, accompagnement vers la réinsertion…).
+
+            </div>
+            <div>
+                <p>&nbsp;</p>
+            </div>
+<!-- debut d'une table -->
+        <table>
+            <table border= "1">
+            <tr>
+                <th>LES ACTIONS</th>
+            </tr>
+            <tr>
+            <td>PSYCHOLOGIQUE</td>
+            <td>PHYSIOLOGIQUE</td>
+            <td>SOCIAL</td>
+            </tr>
+        </table>
+            <center>
+            <img src ="G:\Mon Drive\IAMICROSOFT\STEPH_Projet\promesses_de_dons CORLAY\static\1er-fevrier-2018-record-de-pluie-en-france.jpg">
+            <div class= "aidez-nous" >
+            <button><a href="{{ url_for('form') }}">FAIRE UN DON</button></center> 
+            </div>
+            
+            
+
+            <p id="enbas"></p>
+        {% endblock %}

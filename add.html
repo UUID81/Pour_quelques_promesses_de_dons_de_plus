@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}PARFAIT{% endblock %}
+
+{% block contenu %} 
+    <h1>Le donnateur a bien été ajouté à la base.</h1>
+{% endblock %}
+
+{% block meta  %}
+<meta http-equiv="refresh" content="1 ; {{ url_for('merci') }}" />
+{% endblock %}

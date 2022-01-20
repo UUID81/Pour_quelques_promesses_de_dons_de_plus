@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Fiche{% endblock %}
+
+{% block contenu %} 
+{% for donnateur in donnateurs %}
+    <h1>{{ donnateur['nom'] }}</h1>
+    <ul>
+        <li>{{ donnateur['prenom'] }}</li>
+        <li>{{ donnateur['don'] }}</li>
+    </ul>
+    {%endfor%}
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div>   
+        <a href="{{ url_for('index') }}">Accueil</a>
+        <a href="{{ url_for('form') }}">Formulaire de don</a>
+        <img src = "{{ url_for('static', filename='don-momo.jpg')}}"> 
+    </div>
+
+    {% block contenu %}
+    
+    {% endblock %}
+</body>
+</html>

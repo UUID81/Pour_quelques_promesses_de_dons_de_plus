@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>           <!--première balise html-->
+    <head>  
+        <img src = "{{ url_for('static', filename='don-momo.jpg')}}"> 
+        <title>Faites un don</title>
+        <link rel="stylesheet" href="G:\Mon Drive\IAMICROSOFT\STEPH_Projet\promesses_de_dons\style.css"> 
+    </head>
+
+    <body> <!--corp du code-->
+        <!--form method="post" action="mailto:jamin.normand@gmail.Com"-->
+        <!--form method="get" action="http://www.serveur.com/application/page.php"-->    
+        <form action="{{ url_for('add') }}" method="GET" class = "Faites_un_don">               <!-- premier cadre  -->
+            <div class= "Faites_un_don" >
+
+                <input type="radio" id="monsieur" name="sexe" value="h" checked/>
+                <label for="monsieur">M.</label>
+
+                <input type="radio" id="madame" name="sexe" value="f"/>
+                <label for="madame">Mme.</label>
+
+
+                <Label for = "name">Entrez un nom : </Label>
+                <input type="text" name="nom" id="name" required>
+            </div>
+
+            <div class= "Faites_un_don" >
+                <Label for = "prenom">Entrez un prénom : </Label>
+                <input type="text" name="prenom" id="prenom" required>
+            </div>
+
+            <fieldset>
+                <label for="comments">Montant de votre don :</label>
+                 <textarea name="don" id="comments" cols="10" rows="1">
+                 </textarea>
+           </fieldset>
+           <p>
+
+            <div class= "Faites_un_don" >
+                <button type="submit">SOUMETTRE MON DON
+                </button>
+            </div>
+            <img src='https://www.teteenlair-parachutisme.com/wp-content/uploads/2018/01/cb_visa_mastercard_paypal.png'>
+            </div>
+        </form>
+    </body>
+</html>
